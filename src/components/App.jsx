@@ -1,3 +1,4 @@
+import React from 'react';
 import { Suspense, lazy } from 'react';
 import { NavLink, Route, Routes } from 'react-router-dom';
 import { Loader } from './Loader/Loader';
@@ -13,7 +14,6 @@ const MoviePageDetails = lazy(() => {
 });
 
 export const App = () => {
-  // getData();
   return (
     <div className="container">
       <header className="siteHeader">
