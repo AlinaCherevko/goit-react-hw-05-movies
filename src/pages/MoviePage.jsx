@@ -5,12 +5,10 @@ import { getDataByQuery } from 'servises/api';
 import { useSearchParams } from 'react-router-dom';
 
 const MoviePage = () => {
-  // const [searchValue, setSearchValue] = useState('');
   const [resultsByQuery, setResultsByQuery] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
 
   const onSearchBtnClick = value => {
-    // setSearchValue(value);
     setResultsByQuery([]);
   };
   useEffect(() => {

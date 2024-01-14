@@ -1,6 +1,5 @@
 import React from 'react';
 import css from './Form.module.css';
-import { useSearchParams } from 'react-router-dom';
 
 export const Form = ({ onSearchBtnClick, setSearchParams }) => {
   const onFormSubmit = e => {
