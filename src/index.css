@@ -1,4 +1,24 @@
 @import-normalize; /* bring in normalize.css styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: underline;
+}
 
 body {
   margin: 0;
@@ -8,8 +28,28 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.siteHeader {
+  border-bottom: 2px solid grey;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  margin-bottom: 10px;
+}
+.headerNavigation {
+  display: inline-flex;
+  font-weight: 500;
+  font-size: 20px;
+  color: inherit;
+  gap: 30px;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+a.active {
+  color: rgb(176, 16, 16);
 }

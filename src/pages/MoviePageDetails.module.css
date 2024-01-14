@@ -1,0 +1,24 @@
+.infoWrap {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  border-top: 2px solid gray;
+  border-bottom: 2px solid gray;
+}
+.infoTitle {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.infoWrapLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.goBackLink {
+  padding: 1px 8px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  background-color: transparent;
+  margin-top: 10px;
+}

@@ -1,0 +1,26 @@
+.personImg {
+  display: block;
+  width: 200px;
+  height: 270px;
+}
+.personWrap {
+  height: 70px;
+  padding: 5px 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.personName {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.personList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px 0;
+  justify-content: center;
+}
+.personItem {
+  width: 200px;
+  height: 350px;
+}

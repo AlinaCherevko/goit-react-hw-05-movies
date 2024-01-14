@@ -1,0 +1,30 @@
+.detailsWrapper {
+  display: flex;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.detailsImage {
+  width: 300px;
+  height: 400px;
+}
+.detailsWrapperText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.detailsTitle {
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.detailsDescription {
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+.detailsAfterTitle {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 4px;
+}
