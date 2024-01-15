@@ -3,15 +3,9 @@ import { Suspense, lazy } from 'react';
 import { NavLink, Route, Routes } from 'react-router-dom';
 import { Loader } from './Loader/Loader';
 
-const HomePage = lazy(() => {
-  import('pages/HomePage');
-});
-const MoviePage = lazy(() => {
-  import('pages/MoviePage');
-});
-const MoviePageDetails = lazy(() => {
-  import('pages/MoviePageDetails');
-});
+const HomePage = lazy(() => import('pages/HomePage'));
+const MoviePage = lazy(() => import('pages/MoviePage'));
+const MoviePageDetails = lazy(() => import('pages/MoviePageDetails'));
 
 export const App = () => {
   return (

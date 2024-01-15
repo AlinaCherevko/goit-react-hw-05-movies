@@ -1,11 +1,11 @@
 import React from 'react';
 import css from './Form.module.css';
 
-export const Form = ({ onSearchBtnClick, setSearchParams }) => {
+export const Form = ({ onSearchBtnClick }) => {
   const onFormSubmit = e => {
     e.preventDefault();
     const { value } = e.target.elements.text;
-    setSearchParams({ value });
+
     onSearchBtnClick(value);
     e.target.reset();
   };

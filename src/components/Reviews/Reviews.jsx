@@ -19,18 +19,21 @@ export const Reviews = ({ id }) => {
 
   return (
     <div>
-      {/* <Link to={`/movies/${id}/reviews`}>
-        <p>Reviews</p>
-      </Link> */}
-      <ul className={css.reviewList}>
-        {Array.isArray(results) &&
-          results.map(review => (
-            <li key={review.id}>
-              <p className={css.reviewTitle}>{review.author}</p>
-              <p className={css.review}>{review.content}</p>
-            </li>
-          ))}
-      </ul>
+      {results.length !== 0 ? (
+        <ul className={css.reviewList}>
+          {Array.isArray(results) &&
+            results.map(review => (
+              <li key={review.id}>
+                <p className={css.reviewTitle}>{review.author}</p>
+                <p className={css.review}>{review.content}</p>
+              </li>
+            ))}
+        </ul>
+      ) : (
+        <p className={css.reviewTitle}>
+          We dont have any reviews for this movie
+        </p>
+      )}
     </div>
   );
 };
