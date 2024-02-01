@@ -1,24 +1,24 @@
 .formWrap {
   padding: 20px 0;
+  justify-content: center;
 }
 .form {
   display: flex;
-  align-items: center;
+
   width: 100%;
   max-width: 600px;
   background-color: #fff;
   border-radius: 3px;
   overflow: hidden;
 }
+
 .formInput {
   display: inline-block;
   width: 100%;
   font: inherit;
   font-size: 20px;
-  border-bottom: 1px solid rgb(219, 218, 218);
-  border-top: 1px solid rgb(219, 218, 218);
-  border-left: 1px solid rgb(219, 218, 218);
-  border-right: 1px solid rgb(219, 218, 218);
+
+  border: 1px solid rgb(219, 218, 218);
 
   outline: none;
   padding: 12px 8px;
@@ -27,11 +27,16 @@
   font: inherit;
   font-size: 18px;
 }
+.formInput:hover,
+.formInput:focus {
+  border-color: rgb(238, 92, 40);
+}
 .formBtn {
   display: inline-block;
   /* width: 48px; */
   height: 48px;
   border: 0;
+  background-color: orangered;
   background-image: url('https://image.flaticon.com/icons/svg/149/149852.svg');
   background-size: 40%;
   background-repeat: no-repeat;
@@ -41,4 +46,8 @@
   cursor: pointer;
   outline: none;
   padding: 12px 20px;
+}
+.formBtn:hover {
+  color: #fff;
+  background-color: rgb(238, 92, 40);
 }

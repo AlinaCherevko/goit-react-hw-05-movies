@@ -1,0 +1,21 @@
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.siteHeader {
+  border-bottom: 2px solid grey;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  margin-bottom: 10px;
+}
+.headerNavigation {
+  display: inline-flex;
+  font-weight: 500;
+  font-size: 20px;
+  color: #000000;
+  gap: 30px;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+/* a.active {
+  color: rgb(238, 92, 40);
+} */

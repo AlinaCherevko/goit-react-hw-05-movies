@@ -16,9 +16,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
-a:hover {
-  text-decoration: underline;
-}
 
 body {
   margin: 0;
@@ -28,10 +25,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.container {
-  margin: 0 auto;
-  padding: 0 20px;
-}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -51,5 +45,5 @@ code {
   text-decoration: none;
 }
 a.active {
-  color: rgb(176, 16, 16);
+  color: rgb(238, 92, 40);
 }

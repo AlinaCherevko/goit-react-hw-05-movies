@@ -1,0 +1,24 @@
+.filmList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.filmItem {
+  width: 600px;
+  padding: 6px 20px;
+  border: 1px solid gray;
+  background-color: grey;
+  border-radius: 4px;
+}
+.filmLink {
+  text-decoration: none;
+}
+.filmTitle {
+  color: #000000;
+  font-weight: 400;
+  font-size: 22px;
+}
+.filmTitle:hover,
+.filmTitle:focus {
+  color: rgb(238, 92, 40);
+}
