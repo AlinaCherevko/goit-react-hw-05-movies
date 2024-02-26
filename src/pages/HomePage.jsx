@@ -20,7 +20,7 @@ const HomePage = () => {
     getResults();
   }, [results]);
   return (
-    <div>
+    <div className={css.wrap}>
       <h1 className={css.title}>Trending today</h1>
       {results.length > 0 && <FilmList results={results} />}
     </div>

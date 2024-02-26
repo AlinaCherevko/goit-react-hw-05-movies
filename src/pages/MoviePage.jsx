@@ -4,7 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import { Form } from '../components/Form/Form';
 import { FilmList } from 'components/FilmList/FilmList';
 import { getDataByQuery } from 'servises/api';
-
+import css from './MoviePage.module.css';
 const MoviePage = () => {
   const [resultsByQuery, setResultsByQuery] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -30,7 +30,7 @@ const MoviePage = () => {
     getResultsByQuery();
   }, [query]);
   return (
-    <div>
+    <div className={css.wrap}>
       <Form onSearchBtnClick={onSearchBtnClick} />
       {resultsByQuery.length > 0 && <FilmList results={resultsByQuery} />}
     </div>

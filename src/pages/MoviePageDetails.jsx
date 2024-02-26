@@ -41,10 +41,10 @@ const MoviePageDetails = () => {
         <p className={css.infoTitle}>Additional information</p>
         <div className={css.infoWrapLinks}>
           <Link to="cast">
-            <p>Cast</p>
+            <p className={css.link}>Cast</p>
           </Link>
           <Link to="reviews">
-            <p>Reviews</p>
+            <p className={css.link}>Reviews</p>
           </Link>
         </div>
       </div>

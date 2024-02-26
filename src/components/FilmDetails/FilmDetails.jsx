@@ -9,12 +9,11 @@ export const FilmDetails = ({ results }) => {
   //   console.log(results.genres);
   return (
     <>
-      {' '}
       <div className={css.detailsWrapper}>
         <img
           className={css.detailsImage}
           src={path + results.poster_path}
-          alt=""
+          alt={results.title}
         />
         <div className={css.detailsWrapperText}>
           <h2 className={css.detailsTitle}>{results.title}</h2>
@@ -25,14 +24,17 @@ export const FilmDetails = ({ results }) => {
             </span>
           </p>
 
-          <span className={css.detailsDescription}>User score: {rating}%</span>
+          <p className={css.detailsAfterTitle}>
+            User rating:
+            <span className={css.detailsDescription}> {rating}%</span>
+          </p>
+
           <p className={css.detailsAfterTitle}>Overview</p>
           <span className={css.detailsDescription}>{results.overview}</span>
           <p className={css.detailsAfterTitle}>Genres</p>
           <Genres genresArray={results.genres} />
           {results.tagline && (
             <div>
-              {' '}
               <p className={css.detailsAfterTitle}>Tagline</p>
               <span className={css.detailsDescription}>{results.tagline}</span>
             </div>

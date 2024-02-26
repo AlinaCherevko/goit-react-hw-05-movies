@@ -6,9 +6,11 @@ export const Genres = ({ genresArray }) => {
   return (
     <ul className={css.genresList}>
       {Array.isArray(genresArray) &&
-        genresArray
-          .slice(0, 2)
-          .map(genre => <li key={genre.id}>{genre.name}</li>)}
+        genresArray.slice(0, 2).map(genre => (
+          <li className={css.description} key={genre.id}>
+            {genre.name}
+          </li>
+        ))}
     </ul>
   );
 };

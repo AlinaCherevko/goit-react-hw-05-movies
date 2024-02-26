@@ -5,6 +5,7 @@ import css from './FilmList.module.css';
 
 export const FilmList = ({ results }) => {
   const location = useLocation();
+  const path = 'https://image.tmdb.org/t/p/original';
   return (
     <ul className={css.filmList}>
       {Array.isArray(results) &&
@@ -15,6 +16,14 @@ export const FilmList = ({ results }) => {
               state={{ from: location }}
               to={`/movies/${result.id}`}
             >
+              <div className={css.textWrap}>
+                <img
+                  className={css.detailsImage}
+                  src={path + result.poster_path}
+                  alt={result.title}
+                />
+                <p className={css.hiddenText}>Watch trailer</p>
+              </div>
               <p className={css.filmTitle}>{result.title}</p>
             </Link>
           </li>

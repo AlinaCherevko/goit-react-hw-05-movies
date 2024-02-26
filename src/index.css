@@ -7,6 +7,8 @@
 ul {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding-left: 0;
   gap: 8px;
 }
 li {
@@ -16,9 +18,15 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
+img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
 body {
   margin: 0;
+
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
