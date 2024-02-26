@@ -1,6 +1,7 @@
 import React from 'react';
-import css from './FilmDetails.module.css';
 import { Genres } from 'components/Genres/Genres';
+import { ModalTrailer } from 'components/ModalTrailer/ModalTrailer';
+import css from './FilmDetails.module.css';
 
 export const FilmDetails = ({ results }) => {
   const path = 'https://image.tmdb.org/t/p/original';
@@ -16,7 +17,6 @@ export const FilmDetails = ({ results }) => {
           alt={results.title}
         />
         <div className={css.detailsWrapperText}>
-          <h2 className={css.detailsTitle}>{results.title}</h2>
           <p className={css.detailsAfterTitle}>
             Release Date{' '}
             <span className={css.detailsDescription}>
@@ -29,22 +29,22 @@ export const FilmDetails = ({ results }) => {
             <span className={css.detailsDescription}> {rating}%</span>
           </p>
 
-          <p className={css.detailsAfterTitle}>Overview</p>
-          <span className={css.detailsDescription}>{results.overview}</span>
           <p className={css.detailsAfterTitle}>Genres</p>
           <Genres genresArray={results.genres} />
           {results.tagline && (
-            <div>
+            <>
               <p className={css.detailsAfterTitle}>Tagline</p>
               <span className={css.detailsDescription}>{results.tagline}</span>
-            </div>
+            </>
           )}
+          <p className={css.detailsAfterTitle}>Overview</p>
+          <span className={css.detailsDescriptionOverview}>
+            {results.overview}
+          </span>
         </div>
       </div>
-      <div>
-        {/* <Cast id={results.id} />
-        <Reviews id={results.id} /> */}
-      </div>
+
+      <ModalTrailer id={results.id} />
     </>
   );
 };

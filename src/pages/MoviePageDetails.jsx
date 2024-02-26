@@ -12,7 +12,7 @@ const MoviePageDetails = () => {
   //   const params = useParams();
   const { movieId } = useParams();
   const location = useLocation();
-  console.log(location);
+  // console.log(location);
   const backLinkRef = useRef(location.state?.from ?? '/');
   const [results, setResults] = useState('');
 
@@ -24,7 +24,7 @@ const MoviePageDetails = () => {
         const { data } = await getDataById(movieId);
 
         setResults(data);
-        // console.log(data);
+        console.log(data);
       } catch (error) {
         console.log(error.message);
       }
@@ -32,10 +32,11 @@ const MoviePageDetails = () => {
     getResultsById();
   }, [movieId, results]);
   return (
-    <>
+    <div className={css.container}>
       <Link className={css.goBackLink} to={backLinkRef.current}>
-        Go Back
+        <span class={css.arrow}>&#8592;</span> Go Back
       </Link>
+      <h1 className={css.title}>{results.title}</h1>
       <FilmDetails results={results} />
       <div className={css.infoWrap}>
         <p className={css.infoTitle}>Additional information</p>
@@ -54,7 +55,7 @@ const MoviePageDetails = () => {
           <Route path="reviews" element={<Reviews id={results.id} />} />
         </Routes>
       </Suspense>
-    </>
+    </div>
   );
 };
 

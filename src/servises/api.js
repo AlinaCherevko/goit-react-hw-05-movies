@@ -38,18 +38,21 @@ export async function getDataAboutReviews(id) {
   return data;
 }
 
-export async function getTrailer(id) {
+export async function getTrailerById(id) {
   const { data } = await axios(`/movie/${id}/videos`);
+  // console.log(data);
+
   const trailerResults = data.results;
   console.log(trailerResults);
   if (trailerResults.length === 0) return;
   const trailers = trailerResults.filter(
     trailer => trailer.type === 'Trailer' && trailer.site === 'YouTube'
   );
-  console.log(trailers);
+  // console.log(trailers);
 
   if (trailers.length === 0) return;
 
-  console.log(trailers[0]);
+  // console.log(trailers[0]);
+  return trailers[0];
 }
-getTrailer(496243);
+// getTrailerById(496243);

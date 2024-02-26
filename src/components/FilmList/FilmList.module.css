@@ -35,8 +35,7 @@
   color: transparent;
   top: 0;
   background-color: transparent;
-  padding-top: 30px;
-  padding-left: 30px;
+
   transition-property: all;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -47,9 +46,15 @@
   opacity: 0.66;
   color: #fff;
 }
+.filmItem:hover .buttonYoutube {
+  background-color: #ff0000;
+
+  color: #ffffff;
+}
 
 .filmTitle {
   text-align: center;
+
   color: #fff;
   font-weight: 500;
   font-size: 20px;
@@ -61,4 +66,22 @@
 .filmTitle:focus {
   color: rgb(238, 92, 40);
   text-decoration: underline;
+}
+.buttonYoutube {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: transparent;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }

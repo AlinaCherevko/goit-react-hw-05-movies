@@ -22,7 +22,9 @@ export const FilmList = ({ results }) => {
                   src={path + result.poster_path}
                   alt={result.title}
                 />
-                <p className={css.hiddenText}>Watch trailer</p>
+                <div className={css.hiddenText}>
+                  <span class={css.buttonYoutube}>YouTube</span>
+                </div>
               </div>
               <p className={css.filmTitle}>{result.title}</p>
             </Link>
