@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getData } from 'servises/api';
 import { FilmList } from 'components/FilmList/FilmList';
 
@@ -9,7 +9,7 @@ const HomePage = () => {
   const [results, setResults] = useState([]);
   const [page, setPage] = useState(1);
   const [isVisibleLoadMoreBtn, setIsVisibleLoadMoreBtn] = useState(false);
-  const isFirstRender = useRef(true);
+  // const isFirstRender = useRef(true);
 
   const onLoadMoreClick = () => {
     setPage(prevState => prevState + 1);
@@ -25,10 +25,10 @@ const HomePage = () => {
       } catch (error) {}
     };
 
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
-      return;
-    }
+    // if (isFirstRender.current) {
+    //   isFirstRender.current = false;
+    //   return;
+    // }
     getResults();
   }, [page]);
   return (
