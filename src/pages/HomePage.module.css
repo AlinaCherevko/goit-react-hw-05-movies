@@ -7,3 +7,21 @@
 .title {
   margin: 20px 0;
 }
+
+.loadMore {
+  color: #fff;
+  padding: 15px 60px;
+  border-radius: 20px;
+  border-color: transparent;
+  background-color: orangered;
+  font-size: 20px;
+  font-weight: 500;
+  transition-property: all;
+  transition-duration: 250ms;
+  margin: 50px 0 20px;
+}
+
+.loadMore:hover,
+.loadMore:focus {
+  background-color: rgb(245, 105, 53);
+}

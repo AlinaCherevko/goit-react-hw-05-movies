@@ -4,8 +4,10 @@ axios.defaults.baseURL = 'https://api.themoviedb.org/3';
 axios.defaults.headers.common['Authorization'] =
   'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNzNkMWNlMGNiNmEzYWMzYzFkYjM4ZDM3N2I4MjRlZiIsInN1YiI6IjY0ODYzMjhlMDI4ZjE0MDEzYjg2MmZlYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.HoABGc9RClt9cVwg4PCMlGrDzSxlVjcxQL3XcwPvhY0';
 
-export async function getData() {
-  const { data } = await axios.get(`/trending/movie/day?language=en-US`);
+export async function getData(perPage = 1) {
+  const { data } = await axios.get(
+    `/trending/movie/day?page=${perPage}&language=en-US`
+  );
   console.log(data);
   return data;
 }
@@ -43,7 +45,7 @@ export async function getTrailerById(id) {
   // console.log(data);
 
   const trailerResults = data.results;
-  console.log(trailerResults);
+  // console.log(trailerResults);
   if (trailerResults.length === 0) return;
   const trailers = trailerResults.filter(
     trailer => trailer.type === 'Trailer' && trailer.site === 'YouTube'
