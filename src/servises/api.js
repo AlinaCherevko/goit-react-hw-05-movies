@@ -8,7 +8,7 @@ export async function getData(perPage = 1) {
   const { data } = await axios.get(
     `/trending/movie/day?page=${perPage}&language=en-US`
   );
-  console.log(data);
+  // console.log(data);
   return data;
 }
 // getData();

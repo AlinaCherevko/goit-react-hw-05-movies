@@ -25,3 +25,6 @@
 .loadMore:focus {
   background-color: rgb(245, 105, 53);
 }
+.active {
+  background-color: red;
+}
