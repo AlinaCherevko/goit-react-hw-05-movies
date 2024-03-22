@@ -22,7 +22,7 @@ export const FilmList = ({ results }) => {
                 alt={result.title}
               />
               <div className={css.hiddenText}>
-                <span class={css.buttonYoutube}>YouTube</span>
+                <span className={css.buttonYoutube}>YouTube</span>
               </div>
             </div>
             <p className={css.filmTitle}>{result.title}</p>
