@@ -13,7 +13,6 @@ const HomePage = () => {
   const [isVisibleLoadMoreBtn, setIsVisibleLoadMoreBtn] = useState(false);
 
   const handleSelect = value => {
-    setResults([]);
     setSelectedValue(value);
 
     console.log(selectedValue);
