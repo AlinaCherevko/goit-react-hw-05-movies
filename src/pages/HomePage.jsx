@@ -43,7 +43,11 @@ const HomePage = () => {
     <div className={css.wrap}>
       <Filter handleSelect={handleSelect} />
       <h1 className={css.title}>Trending today</h1>
-      {results.length > 0 && <FilmList results={filteredResults} />}
+      {filteredResults.length === 0 ? (
+        <p>Not found movies with this genre</p>
+      ) : (
+        <FilmList results={filteredResults} />
+      )}
       {isVisibleLoadMoreBtn && (
         <button className={css.loadMore} onClick={onLoadMoreClick}>
           Load more
