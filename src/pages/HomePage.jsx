@@ -8,7 +8,7 @@ import Filter from 'components/Filter/Filter';
 const HomePage = () => {
   // console.log(location);
   const [results, setResults] = useState([]);
-  const [selectedValue, setSelectedValue] = useState('');
+  const [selectedValue, setSelectedValue] = useState(null);
   const [page, setPage] = useState(1);
   const [isVisibleLoadMoreBtn, setIsVisibleLoadMoreBtn] = useState(false);
 
@@ -16,15 +16,12 @@ const HomePage = () => {
     setSelectedValue(value);
 
     console.log(selectedValue);
-
-    const filteredResults = results.filter(({ genre_ids }) =>
-      genre_ids.includes(Number(value))
-    );
-
-    console.log(filteredResults);
-    setResults(filteredResults);
-    console.log(results);
   };
+  const filteredResults = selectedValue
+    ? results.filter(({ genre_ids }) =>
+        genre_ids.includes(Number(selectedValue))
+      )
+    : results;
 
   const onLoadMoreClick = () => {
     setPage(prevState => prevState + 1);
@@ -46,7 +43,7 @@ const HomePage = () => {
     <div className={css.wrap}>
       <Filter handleSelect={handleSelect} />
       <h1 className={css.title}>Trending today</h1>
-      {results.length > 0 && <FilmList results={results} />}
+      {results.length > 0 && <FilmList results={filteredResults} />}
       {isVisibleLoadMoreBtn && (
         <button className={css.loadMore} onClick={onLoadMoreClick}>
           Load more
